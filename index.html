@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p1{
+            background-color:rgb(89, 0, 255) ;
+            font-weight: 100;
+            height: 50px;
+            width: 100px;
+            font-size: medium;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+<body>
+
+    <p id="p1"></p>
+    <script>
+        function show()
+        {
+            var time=new Date
+            var h=time.getHours()
+            var m=time.getMinutes()
+            var s=time.getSeconds()
+            var completetime
+
+            if(h>12)
+            {
+                h=h-12
+            }
+            if(h<10){
+
+            
+            h="0"+h
+            }
+            if(m<10)
+            {
+                m="0"+m
+            }
+            if(s<10)
+            {
+                s="0"+s
+            }
+            completetime=h+":"+m+":"+s
+            var c=document.getElementById("p1")
+            c.innerHTML=completetime
+        }
+        setInterval(show,1000)
+    </script>
+    
+</body>
+</html>
